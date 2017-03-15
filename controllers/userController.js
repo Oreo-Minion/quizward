@@ -18,6 +18,10 @@ router.use(jsonParse);
 // Routers
 router.get('/', function(req, res) {
   res.render('user/profile', { user: req.user });
-})
+});
+
+router.get('/test', function(req, res) {
+  res.render('user/profile', { user: req.user });
+});
 
 module.exports = router;
