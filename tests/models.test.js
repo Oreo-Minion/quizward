@@ -23,6 +23,14 @@ var admin = {
   isAdmin: true,
 }
 
+var user_a = {
+  id: '-1',
+  username: 'anonymous',
+  email: 'anonymous',
+  password_hash: 'anonymous',
+  isAdmin: false,
+}
+
 var user_1 = {
   username: 'food guru',
   email: 'foodie@gmail.com',
