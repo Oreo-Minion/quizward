@@ -11,13 +11,26 @@ $(document).ready(function(){
     return;
   } 
 
-  // 1) Get the user's info
-  var user_id = 6;
-  var url = window.location.origin + '/api/users/' + user_id;
-  console.log(url);
-  $.get(url, function(data){
-    console.log(data);
+  // 0) testing request
+  var url_origin = window.location.origin;
+  var url = url_origin + '/user/test';
+  console.log("making a request to: " + url);
+  $.ajax({
+    url: url,
+    data: { url_origin: url_origin },
+    method: 'POST',
   })
+  .then(function(results) {
+    console.log(results);
+  })
+
+  // 1) Get the user's info
+  // var user_id = 6;
+  // var url = window.location.origin + '/api/users/' + user_id;
+  // console.log(url);
+  // $.get(url, function(data){
+  //   console.log(data);
+  // })
 
   // 2) get user's categories they're following
 
